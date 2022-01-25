@@ -6,7 +6,7 @@
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
-                Details:
+                Details: {{ currentProduct.name }}
             </div>
             <div class="card-body">
                 <div class="row">
@@ -16,8 +16,8 @@
                     </div>
                     <div class="col-md-6">
                         <h4 class="card-title"></h4>
-                        <p class="card-text">Price: </p>
-                        <p class="card-text">Stock: </p>
+                        <p class="card-text">Price: {{ currentProduct.price }}</p>
+                        <p class="card-text">Stock: {{ currentProduct.unit_in_stock }}</p>
                     </div>
                 </div>
             </div>

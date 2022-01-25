@@ -18,21 +18,22 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                <tr *ngFor = "let prd of products; let i = index">
+                    <td>{{ i+1 }}</td>
+                    <td>{{ prd.name }}</td>
+                    <td>{{ prd.price }}</td>
+                    <td>{{ prd.unit_in_stock }}</td>
+
                     <td>
-                        <a class="btn btn-primary btn-sm">
+                        <a class="btn btn-primary btn-sm" routerLink="/product/detail/{{prd._id}}">
                             Detail
                         </a>
                     </td>
                     <td>
-                        <a class="btn btn-info btn-sm">
+                        <a class="btn btn-info btn-sm" routerLink="/product/edit/{{prd._id}}">
                             Edit
                         </a> &nbsp;
-                        <a class="btn btn-danger btn-sm">
+                        <a class="btn btn-danger btn-sm" (click)="deleteProduct(prd._id)">
                             Delete
                         </a>
                     </td>

@@ -9,6 +9,8 @@ import { ProductComponent } from './components/pages/product/product.component';
 import { NewProductComponent } from './components/pages/new-product/new-product.component';
 import { EditProductComponent } from './components/pages/edit-product/edit-product.component';
 import { ProductDetailComponent } from './components/pages/product-detail/product-detail.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,10 @@ import { ProductDetailComponent } from './components/pages/product-detail/produc
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
